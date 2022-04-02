@@ -1,0 +1,133 @@
+﻿@model SeniorManager.WebMvc.Areas.Administracao.Models.Cliente.ListagemClientes
+@{
+    ViewData["Title"] = "Administração - Clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-md-9 col-12 mb-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h2 class="content-header-title float-left mb-0">Listagem de Clientes</h2>
+                <div class="breadcrumb-wrapper">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            Administração
+                        </li>
+                        <li class="breadcrumb-item active">
+                            Cadastro de Clientes
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content-body">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Filtro</h4>
+                </div>
+                <div class="card-body">
+                    <form action="?" class="form form-horizontal">
+                        <div class="row">
+                            <div class="col-md-4 col-12">
+                                <div class="mb-1">
+                                    <label class="form-label" for="first-name-column">Critério</label>
+                                    <select class="form-control" name="FilterBy" asp-for="FilterBy">
+                                        <option value="0">Selecione</option>
+                                        <option value="razaoSocial">Razão Social</option>
+                                        <option value="nomeFantasia">Nome Fantasia</option>
+                                        <option value="cnpj">CNPJ</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-12">
+                                <div class="mb-1">
+                                    <label class="form-label" for="last-name-column">Valor</label>
+                                    <input type="text" id="last-name-column" class="form-control" name="lname-column" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-12">
+                                <button type="submit" class="btn btn-primary me-1 waves-effect waves-float waves-light"><i data-feather="filter"></i> Filtrar</button>
+                                <button type="reset" class="btn btn-secondary me-1 waves-effect waves-float waves-light"><i data-feather="plus-square"></i> Incluir</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Listagem</h4>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Razão Social</th>
+                                <th>CNPJ</th>
+                                <th>UF</th>
+                                <th>Cidade</th>
+                                <th>Ativo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RTK Residencial Senior</td>
+                                <td>78.605.253/0001-86</td>
+                                <td>RS</td>
+                                <td>Porto Alegre</td>
+                                <td><span class="badge rounded-pill badge-light-primary me-1">Sim</span></td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Editar"><i data-feather="edit"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Excluir"><i data-feather="trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RTK Residencial Senior</td>
+                                <td>78.605.253/0001-86</td>
+                                <td>RS</td>
+                                <td>Porto Alegre</td>
+                                <td><span class="badge rounded-pill badge-light-primary me-1">Sim</span></td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Editar"><i data-feather="edit"></i></button>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Excluir"><i data-feather="trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col align-self-center">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination mb-1">
+                                    <li class="page-item prev"><a class="page-link" href="javascript:void(0);">Primeira</a></li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                                    <li class="page-item next"><a class="page-link" href="javascript:void(0);">Última</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SeniorManager.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:SeniorManager.WebAPI.Controllers.Comum.ClienteController.Paged(SeniorManager.Application.Comum.UseCases.Cliente.Listar.Input)">
+            <summary>
+            Obter listagem de clientes paginada
+            </summary>
+            <remarks>
+            OrderOrientation: ["asc", "desc"]
+            
+            OrderBy: ["cnpj", "namoFantasia", "razaoSocial"]
+            </remarks>
+        </member>
+        <member name="M:SeniorManager.WebAPI.Controllers.Comum.ClienteController.Get(System.Int32)">
+            <summary>
+            Obter cliente por id
+            </summary>
+            <remarks>
+            TODO: Validar se usuário tem acesso a esse cliente
+            </remarks>
+        </member>
+        <member name="M:SeniorManager.WebAPI.Controllers.Comum.ClienteController.Post(SeniorManager.Application.Comum.UseCases.Cliente.Salvar.Input)">
+            <summary>
+            Criar cliente
+            </summary>
+        </member>
+        <member name="M:SeniorManager.WebAPI.Controllers.Comum.ClienteController.Put(SeniorManager.Application.Comum.UseCases.Cliente.Salvar.Input)">
+            <summary>
+            Editar cliente
+            </summary>
+        </member>
+    </members>
+</doc>
